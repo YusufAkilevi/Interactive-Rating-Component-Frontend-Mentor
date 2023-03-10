@@ -1,0 +1,234 @@
+/* ## Colors
+
+### Primary
+
+- Orange: hsl(25, 97%, 53%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light Grey: hsl(217, 12%, 63%)
+- Medium Grey: hsl(216, 12%, 54%)
+- Dark Blue: hsl(213, 19%, 18%)
+- Very Dark Blue: hsl(216, 12%, 8%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Overpass", sans-serif;
+}
+body {
+  background-color: black;
+}
+p {
+  font-size: 15px;
+}
+main {
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+
+.container-rating {
+  background-color: hsl(216, 12%, 8%);
+  width: 400px;
+  padding: 32px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.icon-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(213, 19%, 18%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 36px;
+}
+.rating-title {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 16px;
+}
+.rating-description {
+  color: hsl(217, 12%, 63%);
+  line-height: 1.5;
+}
+.rating-points {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 36px;
+  margin-bottom: 32px;
+}
+.point {
+  color: hsl(217, 12%, 63%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(213, 19%, 18%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.point:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.active {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn {
+  letter-spacing: 2px;
+  border: none;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  border-radius: 500px;
+  background-color: hsl(25, 97%, 53%);
+  padding: 12px 48px;
+  cursor: pointer;
+}
+.btn:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+.container-thanks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: hsl(216, 12%, 8%);
+  width: 400px;
+  padding: 32px;
+  border-radius: 30px;
+  color: #fff;
+  transition: all 0.3s;
+}
+.illustration-thanks {
+  margin-bottom: 30px;
+}
+.result {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.result-text {
+  color: hsl(25, 97%, 53%);
+  width: fit-content;
+  padding: 7px 15px;
+  border-radius: 50px;
+  background-color: hsl(213, 19%, 18%);
+}
+.thanks-text {
+  margin-bottom: 16px;
+}
+.thanks-title {
+  margin-bottom: 16px;
+}
+.thanks-description {
+  line-height: 1.5;
+  color: hsl(217, 12%, 63%);
+}
+.close {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+.attribution {
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* //MOBILE DESIGN  */
+
+@media (max-width: 375px) {
+  .container-rating {
+    width: 325px;
+    border-radius: 11px;
+    padding: 24px;
+  }
+  .icon-star {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 24px;
+  }
+  .rating-title {
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+  .rating-description {
+    font-size: 14px;
+  }
+  .rating-points {
+    gap: 12px;
+    margin-top: 30px;
+    margin-bottom: 24px;
+  }
+  .point {
+    width: 40px;
+    height: 40px;
+  }
+  .point:hover {
+    background-color: hsl(217, 12%, 63%);
+  }
+
+  .btn {
+    letter-spacing: 2px;
+    padding: 14px 48px;
+    margin-bottom: 10px;
+  }
+  /* /////////////////// */
+  /* /////////////////// */
+  /* /////////////////// */
+  .container-thanks {
+    width: 325px;
+    padding: 24px;
+    border-radius: 11px;
+  }
+  .illustration-thanks {
+    margin-bottom: 24px;
+  }
+  .result {
+    margin-bottom: 30px;
+  }
+  .result-text {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .thanks-title {
+    margin-bottom: 12px;
+  }
+  .thanks-description {
+    font-size: 14px;
+  }
+}
